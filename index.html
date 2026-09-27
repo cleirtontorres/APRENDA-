@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+        <img src="" alt="">
         <nav>
             <a href="#inicio">Início</a>
             <a href="#cursos">Cursos</a>
@@ -26,7 +27,7 @@
         <section id="cursos">
             <article class="card-curso">
                 <figure>
-                    <img src="" alt="">
+                    <img src="imagens/html-css.jpg" alt="curso sobre html e css">
                     <caption>HTML e CSS</caption>
                 </figure>
                 <p>Estruturação de páginas e estilização.</p>
@@ -35,7 +36,7 @@
 
             <article class="card-curso">
                 <figure>
-                    <img src="" alt="">
+                    <img src="imagens/logica-programacao.jpg" alt="curso sobre logica para programação">
                     <caption>Lógica de Programação</caption>
                 </figure>
                 <p>Fundamentos para aprender a pensar como programador.</p>
@@ -44,7 +45,7 @@
 
             <article class="card-curso">
                 <figure>
-                    <img src="" alt="">
+                    <img src="imagens/js.png" alt="curso sobre java script">
                     <caption>JavaScript</caption>
                 </figure>
                 <p>Introdução à programação para páginas web.</p>
@@ -53,7 +54,7 @@
 
             <article class="card-curso">
                 <figure>
-                    <img src="" alt="">
+                    <img src="imagens/git.png" alt="curso sobre git e github">
                     <caption>GIT e GITHUB</caption>
                 </figure>
                 <p>Versionamento e organização de projetos.</p>
@@ -62,7 +63,7 @@
 
             <article class="card-curso">
                 <figure>
-                    <img src="" alt="">
+                    <img src="imagens/design-web.png" alt="curso de design para a web">
                     <caption>Design para Web</caption>
                 </figure>
                 <p>Princípios de layout, cores e tipografia.</p>
@@ -71,24 +72,99 @@
 
             <article class="card-curso">
                 <figure>
-                    <img src="" alt="">
-                    <caption>Desenvolvimento</caption>
+                    <img src="imagens/desenvolvimento-web.png" alt="curso de desenvolvimento para a web">
+                    <caption>Desenvolvimento Web</caption>
                 </figure>
                 <p>Conceitos fundamentais para criar sites modernos.</p>
                 <a href="#inscricao">Saiba mais</a>
             </article>
-
         </section>
 
         <section id="sobre">
-
+            <div>
+                <figure>
+                    <img src="" alt="">
+                    <figcaption></figcaption>
+                </figure>
+            </div>
+            <div>
+                <h2></h2>
+                <p></p>
+                <p></p>
+            </div>
         </section>
         
         <section id="destaque">
+            <div class="destaque">
+                <p>100% online</p>
+            </div>
 
+            <div class="destaque">
+                <p>Acesso flexível</p>
+            </div>
+
+            <div class="destaque">
+                <p>Conteúdo prático</p>
+            </div>
+            
+            <div class="destaque">
+                <p>Certificado</p>
+            </div>
         </section>
 
         <section id="inscricao">
+            <h2>Inscreva-se</h2>
+            <p>Preencha os dados para começar sua jornada</p>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Dados pessoais</legend>
+
+                    <label for="name">Nome:</label>
+                    <input type="text" name="name" id="name" required>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" required>
+
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" required>
+
+                    <label for="data">Data de nascimento</label>
+                    <input type="date" name="data" id="data" required>
+
+                    <label for="cursos">Cursos</label>
+                    <select name="cursos" id="cursos" required>
+                        <option value="" disabled selected>Escolha uma opção...</option>
+                        <option value="html-css">HTML e CSS</option>
+                        <option value="logica">Lógica de Programação</option>
+                        <option value="js">JavaScript</option>
+                        <option value="git-github">GIT e GITHUB</option>
+                        <option value="desing-web">Design para Web</option>
+                        <option value="Desenvolvimento-web">Desenvolvimento Web</option>
+                    </select>
+
+                    <span>Modalidade:</span>
+                    <input type="radio" name="modalidade" id="presencial" value="presencial" >
+                    <label for="presencial">Presencial</label>
+                     <input type="radio" name="modalidade" id="online" value="online">
+                    <label for="online">Online</label>
+
+                    <span>Interesses:</span>
+                    <input type="checkbox" name="area" id="html-css">
+                    <label for="html-css">HTML/CSS</label>
+
+                    <input type="checkbox" name="area" id="programacao">
+                    <label for="programacao">Programação</label>
+
+                    <input type="checkbox" name="area" id="git-github">
+                    <label for="git-github">Git/GitHub</label>
+
+                    <label for="descricao">Sobre você:</label>
+                    <textarea name="descricao" id="descricao" rows="10"></textarea>
+                    
+                </fieldset>
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+            </form>
 
         </section>
     </main>
