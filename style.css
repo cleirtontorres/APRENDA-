@@ -1,51 +1,502 @@
 @charset "UTF-8";
 
-*{
-    margin: 0%;
-    padding: 0%;
+/* PALETA #CCFFFF #66CCFF #3399CC #336699 #000033 */
+/* CONFIGURAÇÃO GERAL */
+* {
+    margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    background-color: black;
-    color: white;
+html {
+    scroll-behavior: smooth;
 }
 
-header{
+body {
+    background-color: #CCFFFF;
+    color: #000033;
+}
+
+main {
+    margin: 1rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+/* HEADER */
+header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 20vh;
-}
-
-nav{
-    display: flex;
-    justify-content: end;
-    gap: 2rem;
+    justify-items: center;
+    background-color: #000033;
     padding: 1rem;
 }
 
-#cursos{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 2rem;
+.logo {
+    margin: 0;
 }
 
-.card-curso{
+header img {
+    width: 140px;
+    height: auto;
+    display: block;
+}
+
+/* NAVEGAÇÃO */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 0 0;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #CCFFFF;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+nav a:hover {
+    color: #66CCFF;
+}
+
+/* INÍCIO */
+#inicio {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #3399CC;
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.inicio-conteudo {
+    max-width: 700px;
+}
+
+
+.subtitulo {
+    color: #66CCFF;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+}
+
+#inicio .subtitulo {
+    color: #CCFFFF;
+}
+
+h1 {
+    font-size: 2.2rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+#inicio h1 {
+    color: #ffffff;
+}
+
+#inicio p:not(.subtitulo) {
+    color: #CCFFFF;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* BOTÕES */
+.botao {
+    display: inline-block;
+    background-color: #000033;
+    color: #CCFFFF;
+    padding: 0.8rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #336699;
+}
+
+/* TÍTULOS DAS SEÇÕES */
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.titulo-secao h2 {
+    color: #000033;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.titulo-secao>p:last-child {
+    line-height: 1.5;
+}
+
+/* CURSOS */
+#cursos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.lista-cursos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* CARDS */
+.card-curso {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    border: 1px solid black;
-    border-radius: 5%;
-    padding: 0.5rem;
+    border: 1px solid #336699;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #000033;
+    color: #CCFFFF;
+    box-shadow: 4px 4px 6px #336699;
 }
 
 .card-curso figure {
     display: flex;
     flex-direction: column;
+}
+
+.card-curso img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+}
+
+.card-curso figcaption {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 1rem 1rem 0;
+}
+
+.card-curso p {
+    margin: 0 1rem;
+    line-height: 1.5;
+}
+
+.card-curso a {
+    margin: 0 1rem 1rem;
+    padding: 0.7rem;
+    background-color: #3399CC;
+    color: #CCFFFF;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.card-curso a:hover {
+    background-color: #66CCFF;
+    color: #000033;
+}
+
+/* SOBRE */
+#sobre {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #66CCFF;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.sobre-conteudo {
+    padding: 1.5rem;
+}
+
+.sobre-conteudo h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.sobre-conteudo p:not(.subtitulo) {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* DESTAQUES */
+.lista-destaques {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.destaque {
+    background-color: #336699;
+    color: #CCFFFF;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-left: 5px solid #66CCFF;
+}
+
+.destaque span {
+    color: #66CCFF;
+    font-weight: bold;
+}
+
+.destaque h3 {
+    margin: 0.5rem 0;
+}
+
+.destaque p {
+    line-height: 1.5;
+}
+
+/* INSCRIÇÃO */
+#inscricao {
+    background-color: #3399CC;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+#inscricao .titulo-secao h2 {
+    color: #ffffff;
+}
+
+#inscricao .titulo-secao>p:last-child {
+    color: #CCFFFF;
+}
+
+/* FORMULÁRIO */
+form {
+    background-color: #CCFFFF;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+fieldset {
+    border: 2px solid #336699;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+legend {
+    background-color: #000033;
+    color: #CCFFFF;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+label,
+.label-grupo {
+    display: block;
+    color: #000033;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.7rem;
+    border: 1px solid #336699;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000033;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.opcoes {
+    display: flex;
+    flex-direction: column;
     gap: 0.5rem;
 }
 
-img{
-    width: 200px;
-    height: 200px;
+.opcoes div {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.opcoes input {
+    width: auto;
+}
+
+.opcoes label {
+    margin: 0;
+    font-weight: normal;
+}
+
+/* BOTÕES DO FORMULÁRIO */
+.botoes-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+button {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #000033;
+    color: #CCFFFF;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button[type="reset"] {
+    background-color: #336699;
+}
+
+button:hover {
+    background-color: #66CCFF;
+    color: #000033;
+}
+
+/* FOOTER */
+footer {
+    background-color: #000033;
+    color: #CCFFFF;
+    padding: 2rem 1rem 1rem;
+}
+
+.footer-conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.footer-conteudo img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 0.8rem;
+}
+
+.footer-conteudo h3 {
+    color: #66CCFF;
+    margin-bottom: 0.8rem;
+}
+
+.footer-conteudo p {
+    line-height: 1.5;
+}
+
+.footer-conteudo a {
+    display: block;
+    color: #CCFFFF;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.footer-conteudo a:hover {
+    color: #66CCFF;
+}
+
+.footer-final {
+    border-top: 1px solid #336699;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* TABLET / DESKTOP */
+@media (min-width: 768px) {
+    main {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 1.5rem;
+    }
+
+    /* HEADER */
+    header {
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        justify-items: start;
+        padding: 1rem 3rem;
+    }
+
+    nav {
+        justify-content: end;
+        padding: 0;
+        width: 100%;
+    }
+
+    /* INÍCIO */
+    #inicio {
+        min-height: 60vh;
+        padding: 3rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    /* CURSOS */
+    .lista-cursos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* SOBRE */
+    #sobre {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    .sobre-imagem img {
+        height: 100%;
+        min-height: 400px;
+    }
+
+    /* DESTAQUES */
+    .lista-destaques {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* FORMULÁRIO */
+    #inscricao {
+        padding: 2.5rem;
+    }
+
+    form {
+        max-width: 800px;
+        margin: auto;
+        padding: 2rem;
+    }
+
+    /* BOTÕES */
+    .botoes-formulario {
+        flex-direction: row;
+    }
+
+    button {
+        flex: 1;
+    }
+
+    /* FOOTER */
+    .footer-conteudo {
+        max-width: 1200px;
+        margin: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
