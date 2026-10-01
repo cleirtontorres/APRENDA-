@@ -10,6 +10,7 @@
 
 <body>
 
+    <!-- Cabeçalho -->
     <header>
         <img src="imagens/aprendaa+.png" alt="aprenda+">
         <nav>
@@ -21,6 +22,7 @@
         </nav>
     </header>
 
+    <!-- Corpo principal do site -->
     <main>
         <section id="inicio">
 
@@ -30,7 +32,7 @@
                 <p>Aprenda novas habilidades, desenvolva seu potencial e prepare-se para novos desafios.</p>
                 <a href="#cursos" class="botao">Conheça nossos cursos</a>
             </div>
-            
+
         </section>
 
 
@@ -57,7 +59,7 @@
                 </article>
                 <article class="card-curso">
                     <figure>
-                        <img src="imagens/logica.png" alt="curso sobre logica para programação">
+                        <img src="imagens/logica.png" alt="curso sobre lógica para programação">
                         <figcaption>Lógica de Programação</figcaption>
                     </figure>
                     <p>Fundamentos para aprender a pensar como programador.</p>
@@ -95,13 +97,13 @@
                     <p>Conceitos fundamentais para criar sites modernos.</p>
                     <a href="#inscricao">Saiba mais</a>
                 </article>
-                        </section>
-            </div>
+        </section>
+        </div>
 
         <section id="sobre">
             <div class="sobre-imagem">
                 <figure>
-                    <img src="imagens/html-css.png" alt="">
+                    <img src="imagens/html-css.png" alt="imagem retratando o conjunto de cursos da plataforma">
                     <figcaption></figcaption>
                 </figure>
             </div>
@@ -164,13 +166,22 @@
 
             <form action="#" method="post">
                 <fieldset>
-                    <legend>Dados pessoais</legend> <label for="name">Nome:</label> <input type="text" name="name"
-                        id="name" placeholder="Digite seu nome" required> <label for="email">E-mail:</label> <input
-                        type="email" name="email" id="email" placeholder="Digite seu e-mail" required> <label
-                        for="senha">Senha:</label> <input type="password" name="senha" id="senha"
-                        placeholder="Crie uma senha" required> <label for="data">Data de nascimento:</label> <input
-                        type="date" name="data" id="data" required> <label for="curso">Curso:</label> <select
-                        name="curso" id="curso" required>
+                    <legend>Dados pessoais</legend>
+
+                    <label for="name">Nome:</label>
+                    <input type="text" name="name" id="name" placeholder="Digite seu nome" required>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha" placeholder="Crie uma senha" required>
+
+                    <label for="data">Data de nascimento:</label>
+                    <input type="date" name="data" id="data" required>
+
+                    <label for="curso">Curso:</label>
+                    <select name="curso" id="curso" required>
                         <option value="" disabled selected> Escolha uma opção... </option>
                         <option value="html-css"> HTML e CSS </option>
                         <option value="logica"> Lógica de Programação </option>
@@ -182,26 +193,49 @@
 
                     <span class="label-grupo">Modalidade:</span>
                     <div class="opcoes">
-                        <div> <input type="radio" name="modalidade" id="presencial" value="presencial"> <label
-                                for="presencial"> Presencial </label> </div>
-                        <div> <input type="radio" name="modalidade" id="online" value="online"> <label for="online">
-                                Online </label> </div>
-                    </div> <span class="label-grupo">Interesses:</span>
+                        <div>
+                            <input type="radio" name="modalidade" id="presencial" value="presencial"> <label
+                                for="presencial"> Presencial </label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="modalidade" id="online" value="online">
+                            <label for="online"> Online </label>
+                        </div>
+                    </div>
+
+                    <span class="label-grupo">Interesses:</span>
+
                     <div class="opcoes">
-                        <div> <input type="checkbox" name="area" id="html-css" value="html-css"> <label for="html-css">
-                                HTML/CSS </label> </div>
-                        <div> <input type="checkbox" name="area" id="programacao" value="programacao"> <label
-                                for="programacao"> Programação </label> </div>
-                        <div> <input type="checkbox" name="area" id="git-github" value="git-github"> <label
-                                for="git-github"> Git/GitHub </label> </div>
-                    </div> <label for="descricao"> Conte um pouco sobre você: </label> <textarea name="descricao"
-                        id="descricao" rows="6" placeholder="Conte um pouco sobre seus objetivos..."></textarea>
+                        <div>
+                            <input type="checkbox" name="area" id="html-css" value="html-css">
+                            <label for="html-css">
+                                HTML/CSS </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="area" id="programacao" value="programacao">
+                            <label for="programacao"> Programação </label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="area" id="git-github" value="git-github">
+                            <label for="git-github"> Git/GitHub </label>
+                        </div>
+                    </div>
+
+                    <label for="descricao"> Conte um pouco sobre você: </label>
+                    <textarea name="descricao" id="descricao" rows="6"
+                        placeholder="Conte um pouco sobre seus objetivos..."></textarea>
                 </fieldset>
-                <div class="botoes-formulario"> <button type="submit"> Enviar inscrição </button> <button type="reset">
-                        Limpar </button> </div>
+
+                <div class="botoes-formulario">
+                    <button type="submit"> Enviar inscrição </button>
+                    <button type="reset"> Limpar </button>
+                </div>
             </form>
         </section>
-    </main> <!-- RODAPÉ -->
+    </main> 
+    
+    <!-- RODAPÉ -->
     <footer>
         <div class="footer-conteudo">
             <div> <img src="imagens/aprendaa+.png" alt="Logo Aprenda+">
