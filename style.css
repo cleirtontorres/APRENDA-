@@ -27,39 +27,71 @@ section {
 
 /* HEADER */
 header {
-    display: grid;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #000033;
     padding: 1rem;
 }
 
-.logo {
-    margin: 0;
-}
 
 header img {
-    width: 140px;
+    width: 240px;
     height: auto;
     display: block;
 }
 
 /* NAVEGAÇÃO */
-nav {
+
+.menu{
+    color: white;
+}
+
+#menu{
+    display: none;
+    color: white;
+}
+nav{
+    display: none;
+}
+#menu:checked ~ nav {
     display: flex;
-    justify-content: center;
+   justify-content: center;
     gap: 0.5rem;
     padding: 1rem 0 0;
     flex-wrap: wrap;
+    
 }
 
 nav a {
     color: #CCFFFF;
     text-decoration: none;
-    padding: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+    
+}
+
+nav a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 8px;
+    right: 8px;
+    height: 2px;
+    background-color: #66ccff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 nav a:hover {
     color: #66CCFF;
+    transform: translateY(-3px);
+}
+
+nav a:hover::after{
+    transform: scaleX(1)
 }
 
 /* INÍCIO */
@@ -187,6 +219,8 @@ h1 {
 .card-curso p {
     margin: 0 1rem;
     line-height: 1.5;
+    margin: 0.5em 0 0.5em 0;
+    text-align: center;
 }
 
 .card-curso a {
@@ -430,14 +464,23 @@ footer {
 
     /* HEADER */
     header {
-        grid-template-columns: 1fr 2fr;
+        display: flex;
+        flex-direction: row;
         align-items: center;
-        justify-items: start;
+        justify-content: space-between;
         padding: 1rem 3rem;
     }
 
+    .menu{
+        display: none;
+    }
+
     nav {
-        justify-content: end;
+        display: flex;
+        justify-content: space-between;
+        max-width: 50%;
+        align-items: center;
+        justify-items: center;
         padding: 0;
         width: 100%;
     }
