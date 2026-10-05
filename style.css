@@ -51,9 +51,11 @@ header img {
     display: none;
     color: white;
 }
+
 nav{
     display: none;
 }
+
 #menu:checked ~ nav {
     display: flex;
    justify-content: center;
@@ -130,7 +132,7 @@ h1 {
 }
 
 #inicio h1 {
-    color: #ffffff;
+    color: #FFFFFF;
 }
 
 #inicio p:not(.subtitulo) {
@@ -171,12 +173,6 @@ h1 {
 }
 
 /* CURSOS */
-#cursos {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-}
-
 .lista-cursos {
     display: grid;
     grid-template-columns: 1fr;
